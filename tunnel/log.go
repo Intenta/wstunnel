@@ -33,6 +33,7 @@ func makeLogger(pkg, file, facility string) log15.Logger {
 			log.Crit("Can't connect to syslog", "err", err.Error())
 			os.Exit(1)
 		}
+		h = log15.LvlFilterHandler(log15.LvlWarn, h) // filter out LvlInfo and LvlDebug
 		log15.Root().SetHandler(h)
 		log.Info("Started logging here")
 	} else {
