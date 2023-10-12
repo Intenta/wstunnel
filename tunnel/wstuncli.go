@@ -118,7 +118,7 @@ func NewWSTunnelClient(args []string) *WSTunnelClient {
 
 	cliFlag.Parse(args)
 
-	wstunCli.Log = makeLogger("WStuncli", *logf, "")
+	wstunCli.Log = makeLogger("WStuncli", *logf, "user") // always log to syslog "user" facility
 	writePid(*pidf)
 	wstunCli.Timeout = calcWsTimeout(*tout)
 
