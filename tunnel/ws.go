@@ -188,8 +188,6 @@ func wsReader(rs *remoteServer, ws *websocket.Conn, wsTimeout time.Duration, ch 
 			err = fmt.Errorf("non-binary message received, type=%d", t)
 			break
 		}
-		// give the sender a fixed time to get us the data
-		ws.SetReadDeadline(time.Now().Add(wsTimeout))
 		// get request id
 		var id int16
 		_, err = fmt.Fscanf(io.LimitReader(r, 4), "%04x", &id)
