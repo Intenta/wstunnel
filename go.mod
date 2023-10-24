@@ -10,8 +10,7 @@ require (
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/onsi/ginkgo v1.16.5
-	github.com/onsi/gomega v1.27.10
-	golang.org/x/tools v0.12.0 // indirect
+	github.com/onsi/gomega v1.28.1
 	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
 	gopkg.in/inconshreveable/log15.v2 v2.16.0
 )
